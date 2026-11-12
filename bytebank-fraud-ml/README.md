@@ -2,8 +2,6 @@
 
 Projeto educacional em cinco etapas: exploração, preparação, comparação de Regressão Logística / Random Forest / XGBoost, ajuste de limiar e explicabilidade SHAP.
 
-## Executar no Windows (PowerShell)
-
 ```powershell
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -11,8 +9,6 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 jupyter lab
 ```
-
-Abra `notebooks/deteccao_fraudes.ipynb` e execute as células em ordem.
 
 **Dados:** download automático (~151 MB) a partir de https://huggingface.co/datasets/David-Egea/Creditcard-fraud-detection/blob/main/creditcard.csv, com verificação SHA-256. Dataset original: https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud. Espelho independente: https://zenodo.org/records/7395559.
 
@@ -36,15 +32,3 @@ Após executar o notebook, consulte os ficheiros gerados em `results/`. Os resul
 
 Dataset de setembro de 2013, 284.807 transações, 492 fraudes. Sem identificadores de cliente, validação temporal rigorosa ou informação de custo por alerta. Variáveis PCA anonimizadas restringem interpretação. Não é um sistema de decisão bancária em produção.
 
-## Publicação
-
-```powershell
-git init
-git add .
-git commit -m "Projeto de detecção de fraude com ML"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/bytebank-fraud-ml.git
-git push -u origin main
-```
-
-Crie antes um repositório vazio com esse nome na sua conta do GitHub. Não inclua o dataset.
